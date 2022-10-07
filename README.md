@@ -777,7 +777,8 @@ At this point we're going to demonstrate how using different browserlist configu
 
 To begin with, we will update our `package.json` with an explicit browserlist configuration that targets older browsers (e.g. Internet Explorer).  The rule for production builds is:
 
-* Greater than 0.2% marketshare (this includes IE11)
+* Greater than 0.2% marketshare
+* Last IE version (e.g. IE 11)
 
 Your `package.json` file should now look like:
 
@@ -816,7 +817,8 @@ Your `package.json` file should now look like:
   },
   "browserslist": {
     "production": [
-      "> 0.2%"
+      "> 0.2%",
+      "last 1 ie version"
     ],
     "development": [
       "last 1 chrome version",
@@ -829,7 +831,7 @@ Your `package.json` file should now look like:
 
 This is a much more conservative and supports IE 11 which is cerrently at 0.48% marketshare. Putting this query into https://browsersl.ist we see the following coverage:
 
-![Browserlist Coverage Greater 0.2 Percent](https://github.com/rstrube/react-webpack-tutorial/blob/main/doc/img/20221006205827.png)
+![Browserlist Coverage Greater 0.2 Percent](https://github.com/rstrube/react-webpack-tutorial/blob/main/doc/img/20221006222241.png)
 
 Run `npm run build` and note the filesize of `/dist/main.js`.  On my machine it was **140,078 bytes**.
 
