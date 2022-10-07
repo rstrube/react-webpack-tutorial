@@ -777,7 +777,7 @@ At this point we're going to demonstrate how using different browserlist configu
 
 To begin with, we will update our `package.json` with an explicit browserlist configuration that targets older browsers (e.g. Internet Explorer).  The rule for production builds is:
 
-* > 0.2% marketshare (this includes IE11)
+* Greater than 0.2% marketshare (this includes IE11)
 
 Your `package.json` file should now look like:
 
