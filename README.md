@@ -409,7 +409,7 @@ Start up your application via the Webpack development server:
 
 At this point you should see something like:
 
-![React Web App]((https://github.com/rstrube/react-webpack-tutorial/blob/main/doc/img/20221006171727.png))
+![React Web App](https://github.com/rstrube/react-webpack-tutorial/blob/main/doc/img/20221006171727.png)
 
 If you right click on the page and select `View Page Source`, you'll see the following:
 
@@ -534,7 +534,7 @@ export const App = () => {
 
 At this point your application should look something like:
 
-![React Web App with Styling]((https://github.com/rstrube/react-webpack-tutorial/blob/main/doc/img/20221006173251.png))
+![React Web App with Styling](https://github.com/rstrube/react-webpack-tutorial/blob/main/doc/img/20221006173251.png)
 
 Inspecting the page using your brower's development tools we see:
 
@@ -761,13 +761,13 @@ To get an idea of browser coverage you can visit: https://browsersl.ist
 
 Here you can put in browserlist queries and see exactly what your coverage will be as well as exactly what browsers are supported.
 
-![Browserlist Coverage Defaults for create-react-app]((https://github.com/rstrube/react-webpack-tutorial/blob/main/doc/img/20221006201648.png))
+![Browserlist Coverage Defaults for create-react-app](https://github.com/rstrube/react-webpack-tutorial/blob/main/doc/img/20221006201648.png)
 
 Here you can see we have almost 92% browser coverage, which is quite tuned overall.  Compared to the `defaults` browerlist configuration there isn't much difference:
 
 *Note: `defaults` is a shortcut for: `> 0.5%, last 2 versions, Firefox ESR, not dead`*
 
-![Browserlist Coverage Defaults]((https://github.com/rstrube/react-webpack-tutorial/blob/main/doc/img/20221006203212.png))
+![Browserlist Coverage Defaults](https://github.com/rstrube/react-webpack-tutorial/blob/main/doc/img/20221006203212.png)
 
 This has slightly less coverage, mostly because it removes support for a whole bunch of older Safari on iOS versions.
 
@@ -829,13 +829,13 @@ Your `package.json` file should now look like:
 
 This is a much more conservative and supports IE 11 which is cerrently at 0.48% marketshare. Putting this query into https://browsersl.ist we see the following coverage:
 
-![Browserlist Coverage Greater 0.2 Percent]((https://github.com/rstrube/react-webpack-tutorial/blob/main/doc/img/20221006205827.png))
+![Browserlist Coverage Greater 0.2 Percent](https://github.com/rstrube/react-webpack-tutorial/blob/main/doc/img/20221006205827.png)
 
 Run `npm run build` and note the filesize of `/dist/main.js`.  On my machine it was **140,078 bytes**.
 
 Now tweak the browserlist configuration so that the value is `defaults and supports es6`.  This only targets browers that are included in the default set, that *also* support ECMAScript 6 (also referred to as ECMAScript 2015) language features.  Almost all modern browsers support ES6 and above language features.
 
-![Browserlist Coverage Defaults and ES6 Support]((https://github.com/rstrube/react-webpack-tutorial/blob/main/doc/img/20221006204238.png))
+![Browserlist Coverage Defaults and ES6 Support](https://github.com/rstrube/react-webpack-tutorial/blob/main/doc/img/20221006204238.png)
 
 No go ahead and run `npm run build` again.  Note the filesize of the generated `/dist/main.js` file.  It should be a little bit smaller (**140,039** bytes in my case).  The difference here is negiblie, but this is mostly because of the relatively small amount of JS code in our application, and the fact that we're not using advanced ECMAScript language features that would need to be polyfilled / transpiled for older browsers.
 
