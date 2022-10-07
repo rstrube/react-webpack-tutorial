@@ -831,7 +831,7 @@ Your `package.json` file should now look like:
 
 This is a much more conservative and supports IE 11 which is cerrently at 0.48% marketshare. Putting this query into https://browsersl.ist we see the following coverage:
 
-![Browserlist Coverage Greater 0.2 Percent](https://github.com/rstrube/react-webpack-tutorial/blob/main/doc/img/20221006222241.png)
+![Browserlist Coverage Greater 0.2 Percent and Last IE Version](https://github.com/rstrube/react-webpack-tutorial/blob/main/doc/img/20221006222211.png)
 
 Run `npm run build` and note the filesize of `/dist/main.js`.  On my machine it was **140,078 bytes**.
 
