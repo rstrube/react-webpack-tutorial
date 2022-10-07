@@ -150,15 +150,15 @@ For this tutorial  we'll be using fairly standard code organization:
 ~/Projects/react-webpack-tutorial
 │
 ├── dist -- location for production builds
-│	  ├── index.html -- Webpack generated HTML file (production)
-│	  ├── main.css -- Webpack generated CSS file (production when using mini-css-extract-plugin)
-│	  └── main.js -- Webpack bundled JS file (production)
+│   ├── index.html -- Webpack generated HTML file (production)
+│   ├── main.css -- Webpack generated CSS file (production when using mini-css-extract-plugin)
+│   └── main.js -- Webpack bundled JS file (production)
 │
 ├── node_modules -- (auto gen) location for installed npm packages
 │
 ├── src -- main source folder
 │   │
-│	  ├── components -- location for React components (other than main React component)
+│   ├── components -- location for React components (other than main React component)
 │   │   ├── myComponent1
 │   │   └── myComponent2
 │   │
@@ -168,9 +168,9 @@ For this tutorial  we'll be using fairly standard code organization:
 │   │   ├── myComponent1.scss
 │   │   └── myComponent2.scss
 │   │
-│	  ├── App.js -- main React component
-│	  ├── index.html -- main HTML file to bootstrap JS application
-│	  └── index.js -- main JS file, serves as entry point for Webpack
+│   ├── App.js -- main React component
+│   ├── index.html -- main HTML file to bootstrap JS application
+│   └── index.js -- main JS file, serves as entry point for Webpack
 │
 ├── package-lock.json -- records installed npm packages
 ├── package.json -- defines required npm packages and npm scripts
