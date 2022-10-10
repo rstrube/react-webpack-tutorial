@@ -40,7 +40,7 @@ module.exports = {
                 // process using babel-loader
                 use: {
                     loader: 'babel-loader'
-                    // note: presets should be configured in .bablerc, but here is
+                    // note: presets should be configured in .babelrc, but here is
                     // how you can explicitly provide them to webpack if you prefer:
                     /*
                     options: {
