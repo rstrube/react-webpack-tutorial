@@ -1,9 +1,9 @@
 # Building a React Client-Side Web Application from Scratch
 
 ## Introduction
-React is a Javascript library that's typically used to build client-side web applications.  It's provides a convenient way of organizing your front-end code into reusable components.  It also provides some "syntactial sugar" (i.e. JSX) that makes it far easier to comingle HTML and Javascript.  Please note that client-side web applications *do not* provide server side application logic, and rely on a server to handle requests from the web application.  This server could be an external system (e.g. headless system), or it could be server that's been developed specifically to work with your client-side application.
+React is a Javascript library that's typically used to build client-side web applications.  It provides a convenient way of organizing your front-end code into reusable components.  It also provides some "syntactial sugar" (i.e. JSX) that makes it far easier to comingle HTML and Javascript.  Please note that client-side web applications *do not* provide server side application logic, and rely on a server to handle requests from the web application.  This server could be an external system (e.g. headless system), or it could be a server that's been developed specifically to work with your client-side application.
 
-This tutorial focuses on creating a React client-side web application (from scratch).  This tutorial focuses on creating a React client-side web application (from scratch).  It will not cover creating a backend for your web application.
+This tutorial focuses on creating a React client-side web application (from scratch).  It will not cover creating a backend for your web application.
 
 When building a React client-side web application you'll need the following things:
 
@@ -12,7 +12,7 @@ When building a React client-side web application you'll need the following thin
 * **Module Bundler**: a module bundler takes a bunch of files of different types and bundles them into a *smaller* group of files.  It also helps ensure that modules are loaded in the correct order.  **Webpack** is typically used as the module bundler for React applications.
 
 ## Why aren't you using create-react-app?
-`create-react-app` is an incredible tool, but it abstracts many important details from developers.  I've always been of the mindset that one first needs to understand the fundamentals before using heavy abstraction.  Hopefully after going through this tutorial you'll come away with a new understanding of how `create-react-app` works behind the scenes!
+`create-react-app` is an incredible tool, but it abstracts many important details from developers.  I've always been of the mindset that one first needs to understand the fundamentals before using heavy abstraction.  Hopefully, after going through this tutorial you'll come away with a new understanding of how `create-react-app` works behind the scenes!
 
 ## Initialize a new project
 The first step is to initialize a new project.   By using the `-y` flag npm will setup some sane defaults.
@@ -68,7 +68,7 @@ Install the Babel transpiler, presets, and loader as development dependencies:
 
 ### What are Babel Presets?
 A Babel preset is a collection of plugins that support lanuage features.
-* `@babel/preset-env`: allows us to modern ECMA Script syntax (lambas, imports, etc.), without needing to manage which syntax transforms are needed for a target environent (e.g. browser).
+* `@babel/preset-env`: allows us to use modern ECMA Script syntax (lambas, imports, etc.), without needing to manage which syntax transforms are needed for a target environent (e.g. browser).
 * `@babel/preset-react`: includes plugins to support React language features (e.g. jsx files).
 
 ### What are Webpack Loaders?
@@ -91,7 +91,7 @@ If you're *just* using plain CSS, you'll need to install the following packages 
 ```
 
 * `css-loader`: handles processing of CSS files for Webpack.
-* `style-loader`: handes processing of style definitions in the `<head><style>` tag.
+* `style-loader`: handles processing of style definitions in the `<head><style>` tag.
 
 If you're using Sass, you'll need the install the following packages as development dependencies:
 
@@ -102,10 +102,10 @@ If you're using Sass, you'll need the install the following packages as developm
 * `sass`: the core Sass library
 * `sass-loader`: handles processing of .scss/.sass files for Webpack.
 * `css-loader`: handles processing of .css files for Webpack.
-* `style-loader`: handes processing of style definitions in the `<head><style>` tag
+* `style-loader`: handles processing of style definitions in the `<head><style>` tag
 
 ## Install HTML Webpack Plugin
-The HTML Webpack Plugin simplies the process of adding bundled files to our HTML files.  In our case it will automatically inject our bundled JS and bundled style code.  Because this is only used by Webpack, it will also be installed as a development dependency.
+The HTML Webpack Plugin simplifies the process of adding bundled files to our HTML files.  In our case it will automatically inject our bundled JS and bundled style code.  Because this is only used by Webpack, it will also be installed as a development dependency.
 
 ```shell
 ~/Projects/react-webpack-tutorial> npm install --save-dev html-webpack-plugin
@@ -433,7 +433,7 @@ If you right click on the page and select `View Page Source`, you'll see the fol
 </html>
 ```
 
-Notice that the `<div id="app">` is completely empty! This might seem strange to you until you consider what's actually happening behind the scenes.  Our server (in this case it's the Webpack development server) is serving up an initial HTML file which includes a reference to the bundled `main.js` file (injected by Webpack).  This JS file executes on the client side (within the browser) and manipulates the DOM, adding the content which displays the current date and time.  In fact if you use your browser development tools to inspect the page, you'll see the addiitonal content in the DOM:
+Notice that the `<div id="app">` is completely empty! This might seem strange to you until you consider what's actually happening behind the scenes.  Our server (in this case it's the Webpack development server) is serving up an initial HTML file which includes a reference to the bundled `main.js` file (injected by Webpack).  This JS file executes on the client side (within the browser) and manipulates the DOM, adding the content which displays the current date and time.  In fact if you use your browser development tools to inspect the page, you'll see the additional content in the DOM:
 
 ```html
 <!DOCTYPE html>
@@ -594,7 +594,7 @@ Notice that Webpack automatically injected a `<script>` element in `<head>` that
 We'll be making changes to the webpack configuration in the next section of this tutorial, so for now terminate the webpack development server using `CTRL+C`.
 
 ## Eliminating FOUC (Flash of Unstyled Content)
-Currently JavaScript is injecting the neccessary styles as `<style>` elements within the `<head>` element of the DOM.  Because this technically happens after the browser has already rendered the raw HTML, there is a potential for the page to be loaded and then briefly presented to the user *before* the styles have been added to the DOM.  This creates can create "flash" of content that is unstyled to the user.
+Currently JavaScript is injecting the neccessary styles as `<style>` elements within the `<head>` element of the DOM.  Because this technically happens after the browser has already rendered the raw HTML, there is a potential for the page to be loaded and then briefly presented to the user *before* the styles have been added to the DOM.  This can create a "flash" of content that is unstyled to the user.
 
 To eliminate this, you can use the `mini-css-extract-plugin`.  This will plugin will automatically pregenerate a separate `main.css` file that is referenced via a `<link>` element with the HTML.  The disadvantage of using this plugin is that you might potentially be serving styles to the browser that might not be required for a specific component.
 
@@ -607,7 +607,7 @@ To begin with install the `mini-css-extract-plugin` as a dev dependency:
 Now you'll need to update your `webpack.config.js` to leverage the new plugin.  There are three changes you need to make:
 
 1. Require the `mini-css-extract-plugin`.
-2. Intantiate a new instance of the plugin within the `plugins` array.
+2. Instantiate a new instance of the plugin within the `plugins` array.
 3. Replace all instances of the `style-loader` loader with the `mini-css-extract-plugin` loader.
 
 Below is an updated `webpack.config.js` with the changes (marked via `*NEW*` in the comments):
@@ -698,10 +698,10 @@ Startup your web application using `npm run start`.  The application should look
 </html>
 ```
 
-For now terminate the webpack development server using `CTRL+C`.
+For now, terminate the webpack development server using `CTRL+C`.
 
 ## Production Builds
-Up until now we've been running everything via the Webpack development server.  This is the preferred way to develop, but it's worthwhile understanding how you would create a production build for you application.  This could be served up by an application server like Nginx if you felt inclined.  For the purposes of this tutorial we won't actually setup a separate application server, we'll just show you how webpack creates the optimized bundled files that should be deployed to a production environment.
+Up until now we've been running everything via the Webpack development server.  This is the preferred way to develop, but it's worthwhile to understand how you would create a production build for your application.  This could be served up by an application server like Nginx if you felt inclined.  For the purposes of this tutorial we won't actually setup a separate application server, we'll just show you how webpack creates the optimized bundled files that should be deployed to a production environment.
 
 Previously we setup an npm script called `build`:
 
@@ -714,7 +714,7 @@ Previously we setup an npm script called `build`:
 ```
 
 The `build` script simply runs Webpack in production mode, which by default will:
-* Create the main HTML file which bootstraps the JS web application
+* Creates the main HTML file which bootstraps the JS web application.
 * Bundles and minifies the JS (our `webpack.config.js` defines that our bundled JS file will be created as `/dist/main.js` )
 * Because we're using `mini-css-extract-plugin`, Webpack will bundle and minify the CSS (our bundled CSS is created as `/dist/main.css`)
 
@@ -834,7 +834,7 @@ Your `package.json` file should now look like:
 }
 ```
 
-This is a much more conservative and supports IE 11 which is currently at 0.48% marketshare. Putting this query into https://browsersl.ist we see the following coverage:
+This is much more conservative and supports IE 11 which is currently at 0.48% marketshare. Putting this query into https://browsersl.ist we see the following coverage:
 
 ![Browserlist Coverage Greater 0.2 Percent and Last IE Version](https://github.com/rstrube/react-webpack-tutorial/blob/main/doc/img/20221006222211.png)
 
@@ -844,6 +844,6 @@ Now tweak the browserlist configuration so that the value is `defaults and suppo
 
 ![Browserlist Coverage Defaults and ES6 Support](https://github.com/rstrube/react-webpack-tutorial/blob/main/doc/img/20221006204238.png)
 
-No go ahead and run `npm run build` again.  Note the filesize of the generated `/dist/main.js` file.  It should be a little bit smaller (**140,039** bytes in my case).  The difference here is negiblie, but this is mostly because of the relatively small amount of JS code in our application, and the fact that we're not using advanced ECMAScript language features that would need to be polyfilled / transpiled for older browsers.
+Now go ahead and run `npm run build` again.  Note the filesize of the generated `/dist/main.js` file.  It should be a little bit smaller (**140,039** bytes in my case).  The difference here is negiblie, but this is mostly because of the relatively small amount of JS code in our application, and the fact that we're not using advanced ECMAScript language features that would need to be polyfilled / transpiled for older browsers.
 
 In general most developers can target `defaults`, but it's good to be aware of how the browserlist configuration works and how it affects the transpiled code.
