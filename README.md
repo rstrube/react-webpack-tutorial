@@ -48,8 +48,6 @@ Install the neccessary React packages:
 * `react`: the core React library.
 * `react-dom`: provides binding between React and the DOM.
 
-At this point your `package.json` should look something like (versions of packages might be different):
-
 ## Install Webpack
 Install the Webpack module bundler, along with the CLI tools, and development server.  The Webpack development server supports "hot" reload.
 
@@ -79,6 +77,13 @@ Loaders allow Webpack to handle and process different file types.  In this case 
 ## Install Loaders and Libraries for Styling
 Specific loaders and libraries will need to be installed in order for Webpack to correctly process your styling code.
 
+When defining your styling you can choose to use plain old CSS, or a CSS preprocessor scripting language which is converted into CSS during the build process.  What's nice about using a CSS preprocessor language is that it makes writing your styling code easier and supports more advanced features (e.g. variables, mixins, nesting, etc.).  A very common CSS preprocessor scripting language is Sass (Syntactically Awesome Style Sheets) https://sass-lang.com/.  Sass can be written in two syntaxes: 
+
+1. Sassy CSS (`.scss` file extension): This syntax uses brackets to denote different styling rules and is compliant with CSS syntax.
+2. Indented (`.sass` file extension): This syntax uses indentation to denote different styling rules and is more concise.  It is not, however, compliant with CSS syntax.
+
+For this example we will be using `.scss` files.  Regardless of what syntax you choose to use, webpack will compile your `.scss` and/or `.sass` files into plain old CSS.
+
 If you're *just* using plain CSS, you'll need to install the following packages as development dependencies:
 
 ```shell
@@ -95,7 +100,7 @@ If you're using Sass, you'll need the install the following packages as developm
 ```
 
 * `sass`: the core Sass library
-* `sass-loader`: handles processing of .scss files for Webpack.
+* `sass-loader`: handles processing of .scss/.sass files for Webpack.
 * `css-loader`: handles processing of .css files for Webpack.
 * `style-loader`: handes processing of style definitions in the `<head><style>` tag
 
