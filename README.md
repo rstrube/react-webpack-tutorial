@@ -77,7 +77,7 @@ Loaders allow Webpack to handle and process different file types.  In this case 
 ## Install Loaders and Libraries for Styling
 Specific loaders and libraries will need to be installed in order for Webpack to correctly process your styling code.
 
-When defining your styling you can choose to use plain old CSS, or a CSS preprocessor scripting language which is converted into CSS during the build process.  What's nice about using a CSS preprocessor language is that it makes writing your styling code easier and supports more advanced features (e.g. variables, mixins, nesting, etc.).  A very common CSS preprocessor scripting language is Sass (Syntactically Awesome Style Sheets) https://sass-lang.com/.  Sass can be written in two syntaxes: 
+When defining your styling you can choose to use plain old CSS, or a CSS extension language which is converted into CSS during the build process.  What's nice about using a CSS extension language is that it makes writing your styling code easier and supports more advanced features (e.g. variables, mixins, nesting, etc.).  A very common CSS extension language is Sass (Syntactically Awesome Style Sheets) https://sass-lang.com/.  Sass can be written in two syntaxes:
 
 1. Sassy CSS (`.scss` file extension): This syntax uses brackets to denote different styling rules and is compliant with CSS syntax.
 2. Indented (`.sass` file extension): This syntax uses indentation to denote different styling rules and is more concise.  It is not, however, compliant with CSS syntax.
