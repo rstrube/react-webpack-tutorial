@@ -230,7 +230,7 @@ module.exports = {
                 // process using babel-loader
                 use: {
                     loader: 'babel-loader'
-                    // note: presets should be configured in .bablerc, but here is
+                    // note: presets should be configured in .babelrc, but here is
                     // how you can explicitly provide them to webpack if you prefer:
                     /*
                     options: {
@@ -738,7 +738,7 @@ You should now see the following files created in your `/dist` folder:
 If you open the `main.js` and `main.css` you'll notice optimized production ready code.
 
 ## Optimizing Babel JS Transpilation using Browserlists
-By default Bable will transpile JS written in modern syntax to JS using older syntax that more browsers can understand.  The default Babel configuration today is actually quite optimized and has already dropped support for "dead" browsers like Internet Explorer.  Even so, it might be useful to learn how to tune the browsers you wish to support using `browserlist` configuration (normally defined in `package.json` ).  This configuration defines the browsers you want Babel to target when it transpiles JS code.
+By default Babel will transpile JS written in modern syntax to JS using older syntax that more browsers can understand.  The default Babel configuration today is actually quite optimized and has already dropped support for "dead" browsers like Internet Explorer.  Even so, it might be useful to learn how to tune the browsers you wish to support using `browserlist` configuration (normally defined in `package.json` ).  This configuration defines the browsers you want Babel to target when it transpiles JS code.
 
 If you use `create-react-app` you'll notice the following default browserlist configuration in `package.json`:
 
