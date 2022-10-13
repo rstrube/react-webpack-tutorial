@@ -8,7 +8,7 @@ export const App = () => {
     return (
         <div className="App">
             <h1 className="App-header">React Webpack Tutorial</h1>
-            <p className="App-dateTime">Page loaded at: <code>{dateTime}</code></p>
+            <p>Page loaded at: <code>{dateTime}</code></p>
         </div>
     );
 }

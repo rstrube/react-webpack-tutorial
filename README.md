@@ -503,16 +503,12 @@ This file will provide styling for our main React component:
 
 ```scss
 .App {
-
-    margin: 0 5rem 0 5rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
 
     &-header {
-        text-align: center;
         color: indigo;
-    }
-
-    &-dateTime {
-        text-align: center;
     }
 }
 ```
@@ -531,7 +527,7 @@ export const App = () => {
     return (
         <div className="App">
             <h1 className="App-header">React Webpack Tutorial</h1>
-            <p className="App-dateTime">Page loaded at: <code>{dateTime}</code></p>
+            <p>Page loaded at: <code>{dateTime}</code></p>
         </div>
     );
 }
@@ -553,14 +549,12 @@ Inspecting the page using your brower's development tools we see:
 		<script defer="" src="main.js"></script>
 		<style>
 			.App {
-				margin: 0 5rem 0 5rem;
+				display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
 			}
 			.App-header {
-			  text-align: center;
 			  color: indigo;
-			}
-			.App-dateTime {
-			  text-align: center;
 			}
 		</style>
 		<style>
@@ -580,7 +574,7 @@ Inspecting the page using your brower's development tools we see:
 	    <div id="app">
 		    <div class="App">
 			    <h1 class="App-header">React Webpack Tutorial</h1>
-			    <p class="App-dateTime">Page loaded at: <code>Thu Oct 06 2022 17:31:33 GMT-0600 (Mountain Daylight Time)</code></p>
+			    <p>Page loaded at: <code>Thu Oct 06 2022 17:31:33 GMT-0600 (Mountain Daylight Time)</code></p>
 			</div>
 		</div>
 	</body>

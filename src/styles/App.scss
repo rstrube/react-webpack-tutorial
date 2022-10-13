@@ -1,13 +1,9 @@
 .App {
-
-    margin: 0 5rem 0 5rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
 
     &-header {
-        text-align: center;
         color: indigo;
-    }
-
-    &-dateTime {
-        text-align: center;
     }
 }
